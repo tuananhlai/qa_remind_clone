@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static org.junit.Assert.assertNotNull;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class IntroTest {
@@ -37,13 +39,12 @@ public class IntroTest {
     @Test
     public void secondTest() {
         WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
             driver.get("https://selenium.dev");
             driver.findElement(By.cssSelector("a[href='/projects']")).click();
             driver.findElement(By.className("learn-more")).click();
+            assertNotNull(driver.findElement(By.id("navigation")));
         } finally {
-            wait.until(presenceOfElementLocated(By.cssSelector("#cssSelector")));
             driver.quit();
         }
     }
