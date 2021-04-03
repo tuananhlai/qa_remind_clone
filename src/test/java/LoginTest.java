@@ -1,8 +1,4 @@
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
-
-import java.time.Duration;
 
 import org.junit.AfterClass;
 import org.junit.Test;
@@ -15,13 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginTest {
     private static WebDriver driver = new ChromeDriver();
 
-    private void attemptLogin(String email, String password) {
+    public static void attemptLogin(String email, String password) {
         driver.get("http://localhost:8080");
-        WebElement loginInput = driver.findElement(By.id("input-17"));
+        WebElement loginInput = driver.findElement(By.id("txtEmail"));
         loginInput.sendKeys(email);
-        WebElement passwordInput = driver.findElement(By.id("input-20"));
+        WebElement passwordInput = driver.findElement(By.id("txtPassword"));
         passwordInput.sendKeys(password);
-        WebElement loginBtn = driver.findElement(By.cssSelector("form > button"));
+        WebElement loginBtn = driver.findElement(By.id("btnSignIn"));
         loginBtn.click();
     }
 
