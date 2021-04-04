@@ -2,6 +2,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Random;
 
+import com.microsoft.edge.seleniumtools.EdgeDriver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -17,20 +18,13 @@ import page.LoginPage;
 import page.SendMessagePage;
 
 @FixMethodOrder(MethodSorters.DEFAULT)
-public class SendMessageTest {
-    private static WebDriver driver;
+public class SendMessageTest extends AbstractTest{
     private final static String EMAIL = "koross@gmail.com";
     private final static String PASSWORD = "password";
 
     @BeforeClass
     public static void beforeAll() {
-        driver = new ChromeDriver();
         attemptLogin(EMAIL, PASSWORD);
-    }
-
-    @AfterClass
-    public static void afterAll() {
-        driver.quit();
     }
 
     private static void attemptLogin(String email, String password) {
