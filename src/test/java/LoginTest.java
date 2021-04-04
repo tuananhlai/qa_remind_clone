@@ -1,15 +1,41 @@
 import static org.junit.Assert.assertThrows;
 
+import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.OrderWith;
+import org.junit.runner.manipulation.Alphanumeric;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@OrderWith(Alphanumeric.class)
 public class LoginTest {
     private static WebDriver driver = new ChromeDriver();
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+    @AfterClass
+    public static void afterAll() {
+        driver.quit();
+    }
+
+    @Before
+    public void beforeEach() {
+        driver.manage().deleteAllCookies();
+    }
+
+    @After
+    public void afterEach() {
+        clearLocalStorage();
+    }
+
+    private void clearLocalStorage() {
+        js.executeScript(String.format("window.localStorage.clear();"));
+    }
 
     public static void attemptLogin(String email, String password) {
         driver.get("http://localhost:8080");
@@ -53,10 +79,5 @@ public class LoginTest {
         } finally {
 
         }
-    }
-
-    @AfterClass
-    public static void afterAll() {
-        driver.quit();
     }
 }
