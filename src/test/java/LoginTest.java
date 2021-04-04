@@ -42,16 +42,6 @@ public class LoginTest {
         js.executeScript(String.format("window.localStorage.clear();"));
     }
 
-    public static void attemptLogin(String email, String password) {
-        driver.get("http://localhost:8080/login");
-        WebElement loginInput = driver.findElement(By.id("txtEmail"));
-        loginInput.sendKeys(email);
-        WebElement passwordInput = driver.findElement(By.id("txtPassword"));
-        passwordInput.sendKeys(password);
-        WebElement loginBtn = driver.findElement(By.id("btnSignIn"));
-        loginBtn.click();
-    }
-
     @Test
     public void loginWithCorrectInfo() {
         LoginPage loginPage = new LoginPage(driver);
