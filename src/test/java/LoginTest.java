@@ -11,12 +11,17 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import page.LoginPage;
 
 @OrderWith(Alphanumeric.class)
 public class LoginTest {
     private static WebDriver driver = new ChromeDriver();
     JavascriptExecutor js = (JavascriptExecutor) driver;
+    private final static String EMAIL = "koross@gmail.com";
+    private final static String PASSWORD = "password";
+    private final static String WRONG_EMAIL = "thisiswrong@fidjaovsdc.com";
+    private final static String WRONG_PASSWORD = "thisiswrong";
 
     @AfterClass
     public static void afterAll() {
@@ -25,7 +30,7 @@ public class LoginTest {
 
     @Before
     public void beforeEach() {
-        driver.manage().deleteAllCookies();
+        driver.get("http://localhost:8080/login");
     }
 
     @After
@@ -38,7 +43,7 @@ public class LoginTest {
     }
 
     public static void attemptLogin(String email, String password) {
-        driver.get("http://localhost:8080");
+        driver.get("http://localhost:8080/login");
         WebElement loginInput = driver.findElement(By.id("txtEmail"));
         loginInput.sendKeys(email);
         WebElement passwordInput = driver.findElement(By.id("txtPassword"));
@@ -49,35 +54,19 @@ public class LoginTest {
 
     @Test
     public void loginWithCorrectInfo() {
-        try {
-            attemptLogin("koross@gmail.com", "password");
-
-            new WebDriverWait(driver, 3)
-                    .until(driver -> driver.findElement(By.className("v-navigation-drawer__content")));
-        } finally {
-            new WebDriverWait(driver, 3);
-        }
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.attemptLogin(EMAIL, PASSWORD);
     }
 
     @Test
     public void loginWithIncorrectUsername() {
-        try {
-            attemptLogin("korossfasfas@gmafasfafil.com", "password");
-            assertThrows("User failed to login", Exception.class, () -> new WebDriverWait(driver, 3)
-                    .until(driver -> driver.findElement(By.className("v-navigation-drawer__content"))));
-        } finally {
-
-        }
+        LoginPage loginPage = new LoginPage(driver);
+        assertThrows("User failed to login", Exception.class, () -> loginPage.attemptLogin(WRONG_EMAIL, PASSWORD));
     }
 
     @Test
     public void loginWithIncorrectPassword() {
-        try {
-            attemptLogin("koross@gmail.com", "passwords");
-            assertThrows("User failed to login", Exception.class, () -> new WebDriverWait(driver, 3)
-                    .until(driver -> driver.findElement(By.className("v-navigation-drawer__content"))));
-        } finally {
-
-        }
+        LoginPage loginPage = new LoginPage(driver);
+        assertThrows("User failed to login", Exception.class, () -> loginPage.attemptLogin(EMAIL, WRONG_PASSWORD));
     }
 }
