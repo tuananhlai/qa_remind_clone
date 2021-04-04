@@ -16,6 +16,11 @@ public class HomePage {
         new WebDriverWait(driver, 2).until(ExpectedConditions.presenceOfElementLocated(sideBarBy));
     }
 
+    /**
+     * Go to the first conversation of the first class.
+     * 
+     * @return
+     */
     public SendMessagePage goToFirstClassConvo() {
         WebElement firstClassItem = driver.findElement(By.className("itemClass"));
         firstClassItem.click();
@@ -25,5 +30,14 @@ public class HomePage {
         firstConversation.click();
 
         return new SendMessagePage(driver);
+    }
+
+    public FileListPage goToFileListPage() {
+        WebElement firstClassItem = driver.findElement(By.className("itemClass"));
+        firstClassItem.click();
+        WebElement fileTab = driver.findElement(By.className("tabFile"));
+        fileTab.click();
+
+        return new FileListPage(driver);
     }
 }
