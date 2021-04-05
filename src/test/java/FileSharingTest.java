@@ -2,12 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-import com.microsoft.edge.seleniumtools.EdgeDriver;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import page.FileListPage;
 import page.HomePage;

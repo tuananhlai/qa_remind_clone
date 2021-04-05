@@ -12,7 +12,6 @@ public class SendMessagePage {
     private By textBoxBy = By.id("message-text-box-input");
     private By sendBtnBy = By.id("btnSend");
     private By messageListBy = By.id("message-list-item");
-    private By itemMessageBy = By.className("itemMessage");
 
     public SendMessagePage(WebDriver driver) {
         this.driver = driver;

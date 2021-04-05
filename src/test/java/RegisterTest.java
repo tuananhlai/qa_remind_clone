@@ -3,13 +3,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Random;
 
-import com.microsoft.edge.seleniumtools.EdgeDriver;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import page.LoginPage;
 import page.RegisterPage;
