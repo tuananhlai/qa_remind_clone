@@ -1,5 +1,6 @@
 import static org.junit.Assert.assertThrows;
 
+import com.microsoft.edge.seleniumtools.EdgeDriver;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,19 +15,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import page.LoginPage;
 
+import java.io.IOException;
+
 @OrderWith(Alphanumeric.class)
-public class LoginTest {
-    private static WebDriver driver = new ChromeDriver();
+public class LoginTest extends AbstractTest{
     JavascriptExecutor js = (JavascriptExecutor) driver;
     private final static String EMAIL = "koross@gmail.com";
     private final static String PASSWORD = "password";
     private final static String WRONG_EMAIL = "thisiswrong@fidjaovsdc.com";
     private final static String WRONG_PASSWORD = "thisiswrong";
-
-    @AfterClass
-    public static void afterAll() {
-        driver.quit();
-    }
 
     @Before
     public void beforeEach() {

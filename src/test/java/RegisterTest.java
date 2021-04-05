@@ -3,6 +3,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Random;
 
+import com.microsoft.edge.seleniumtools.EdgeDriver;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -13,20 +14,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import page.LoginPage;
 import page.RegisterPage;
 
-public class RegisterTest {
-    private static WebDriver driver;
-
+public class RegisterTest extends AbstractTest {
     private final static String EXISTING_EMAIL = "koross@gmail.com";
-
-    @BeforeClass
-    public static void beforeAll() {
-        driver = new ChromeDriver();
-    }
-
-    @AfterClass
-    public static void afterAll() {
-        driver.quit();
-    }
 
     @Before
     public void beforeEach() {

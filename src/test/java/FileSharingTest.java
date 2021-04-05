@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
+import com.microsoft.edge.seleniumtools.EdgeDriver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -12,21 +13,14 @@ import page.FileListPage;
 import page.HomePage;
 import page.LoginPage;
 
-public class FileSharingTest {
-    private static WebDriver driver;
+public class FileSharingTest extends AbstractTest {
     private final static String EMAIL = "koross@gmail.com";
     private final static String PASSWORD = "password";
 
     @BeforeClass
     public static void beforeAll() {
-        driver = new ChromeDriver();
         driver.get("http://localhost:8080");
         new LoginPage(driver).attemptLogin(EMAIL, PASSWORD);
-    }
-
-    @AfterClass
-    public static void afterAll() {
-        driver.quit();
     }
 
     private File createRandomlyNamedFile() {
