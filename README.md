@@ -30,6 +30,23 @@ As for the folk using Windows, I am sorry. Please try to run the project on your
 
 or... go go IntelliJ brr brr ヾ(•ω•`)o
 
+### Setup Selenium Grid
+
+- Download the Selenium Grid 3 jar file from [Selenium download page](https://selenium.dev/downloads/).
+- Start the jar file as a hub in your local machine.
+
+```sh
+java -jar selenium-server-standalone.jar -role hub
+```
+
+- Create a new terminal instance and start the same jar file as a node. You can read more about node configurations [here](https://www.selenium.dev/documentation/en/grid/grid_3/setting_up_your_own_grid/)
+
+```sh
+java -jar selenium-server-standalone.jar -role node
+```
+
+- Change the `@BeforeClass` method of `AbstractTest` to test the right browser.
+
 ## Run the test
 
 I am using VSCode and IntelliJ to write this script. There is a little button above each test class to run the test. Press it.
