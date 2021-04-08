@@ -1,0 +1,141 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[T5]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{imakeidx}
+\usepackage{graphicx}
+\usepackage{dirtree}
+\usepackage{placeins}
+\usepackage[unicode, bookmarksopenlevel=4]{hyperref}
+\usepackage{makeidx}
+\usepackage[style=alphabetic]{biblatex}
+\usepackage[acronym]{glossaries}
+\usepackage{glossaries}
+\usepackage{multicol}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\let\orgautoref\autoref
+\providecommand{\Autoref}[1]
+{
+	\def\figureautorefname{Hình}
+	\def\tableautorefname{Bảng}
+	\orgautoref{#1}
+}
+
+\renewcommand{\autoref}[1]
+{
+	\def\figureautorefname{hình}
+	\def\tableautorefname{bảng}
+	\orgautoref{#1}
+}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% \newcommand{\iindex}[1]{\textit{#1}\index{#1}}
+
+% Create file reference.bib to add 
+\addbibresource{./reference.bib}
+%\makeindex[intoc]
+%\makeglossaries
+%\loadglsentries{glossary}
+\graphicspath{ {./images/} {./../images}}
+\DeclareGraphicsExtensions{.png}
+\setlist[description]{leftmargin=\parindent,labelindent=\parindent}
+
+\title{Usecase Model}
+
+\begin{document}
+	
+	\subfile{cover.tex}
+	\clearpage
+	
+	\tableofcontents 
+	\clearpage
+	
+	
+	%	\listoffigures
+		
+	%	\listoftables
+		
+	%	\printglossary[type=\acronymtype, title=Thuật ngữ viết tắt]
+	%	\clearpage
+	
+	%	\section{Section}
+	%	\subfile{./sections/section1.tex}
+	 
+	
+	% Sub file must require this
+	% \documentclass[./../main_file.tex]{subfiles}
+	
+	% \begin{document}
+	% \end{document}
+	
+	% \section{Section}
+	% \subfile{./sections/section_0.tex}
+	\section{Mở đầu}
+	\subfile{./sections/section_1.tex}
+	
+	\section{Giới thiệu về Selenium}
+	\subfile{./sections/section_2.tex}
+	
+	\section{Hướng dẫn tải và cài đặt}
+	\subfile{./sections/section_3.tex}
+	
+	\section{Áp dụng Selenium vào kiểm thử ứng dụng Web}
+	\subfile{./sections/section_4.tex}
+	
+	\section{Kết luận}
+	
+	Như vậy, ta có thể thấy rằng Selenium là một framework mạnh mẽ cho kiểm thử tự động. Qua bộ công cụ của Selenium, người dùng có thể thực hiện kiểm thử nhanh chóng, hiệu quả và đem lại độ chính xác cao. Hơn nữa, Selenium là một framework có mã nguồn mở và luôn được cộng đồng hỗ trợ và phát triển. Tuy nhiên, Selenium có nhược điểm là không phù hợp với người không có kinh nghiệm về lập trình. Nếu chỉ sử dụng được Selenium IDE thì hiệu quả của việc kiểm thử sẽ không cao. Do đó, người kiểm thử bắt buộc phải biết ít nhất một ngôn ngữ lập trình mà Selenium hỗ trợ để có thể viết được các ca kiểm thử một cách bài bản, chuyên nghiệp.
+	
+	
+	%	\nocite{*}
+	%	\printbibliography[heading=bibintoc, title=Tài liệu tham khảo]
+	%	\printindex
+	
+\end{document}
+

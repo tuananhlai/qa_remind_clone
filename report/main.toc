@@ -1,0 +1,57 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Mở đầu}{2}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Giới thiệu về Selenium}{3}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Selenium là gì?}{3}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Các công cụ của Selenium}{4}{subsection.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Selenium IDE}{5}{subsection.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.3.1}Tính năng của Selenium IDE}{6}{subsubsection.2.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.3.2}Selenese là gì?}{7}{subsubsection.2.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.3.3}Phân loại các lệnh Selenium}{7}{subsubsection.2.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.3.4}Ưu điểm}{7}{subsubsection.2.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.3.5}Nhược điểm}{8}{subsubsection.2.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Selenium WebDriver}{8}{subsection.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1}Ưu điểm}{9}{subsubsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.2}Nhược điểm}{10}{subsubsection.2.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}Selenium Grid}{10}{subsection.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.5.1}Ưu điểm}{11}{subsubsection.2.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.5.2}Nhược điểm}{12}{subsubsection.2.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6}So sánh với các bộ công cụ khác}{13}{subsection.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Hướng dẫn tải và cài đặt}{13}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Selenium IDE}{14}{subsection.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Áp dụng Selenium vào kiểm thử ứng dụng Web}{15}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Hệ thống học trực tuyến Remind Clone}{15}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Phân tích vấn đề}{16}{subsection.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Viết ca kiểm thử}{16}{subsection.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.1}Ca kiểm thử cho màn hình đăng nhập}{17}{subsubsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.2}Ca kiểm thử cho những chức năng khác}{19}{subsubsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.3}Kiểm thử trên nhiều nền tảng với Selenium Grid}{21}{subsubsection.4.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.4}Kết quả kiểm thử}{21}{subsubsection.4.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Kết luận}{22}{section.5}%
