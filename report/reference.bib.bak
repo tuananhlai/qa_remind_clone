@@ -1,0 +1,18 @@
+% Encoding: UTF-8
+
+@Article{Com98,
+  author = {IEEE Software Engineering Standards Committee},
+  date   = {1998-10-20},
+  title  = {IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements Specification},
+}
+
+@WWW{Sha19,
+  author = {Shadi Abou Zahra, Acknowledgments},
+  date   = {2019-05-10},
+  title  = {Accessibility Principles},
+  url    = {https://www.w3.org/WAI/fundamentals/accessibility-principles},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
+
+@Comment{jabref-meta: keypatterndefault:[auth3][shortyear];}
