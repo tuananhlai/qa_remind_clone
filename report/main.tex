@@ -77,7 +77,8 @@
 
 % Create file reference.bib to add 
 \addbibresource{./reference.bib}
-%\makeindex[intoc]
+% \bibliographystyle{ieee}
+\makeindex[intoc]
 %\makeglossaries
 %\loadglsentries{glossary}
 \graphicspath{ {./images/} {./../images}}
@@ -116,24 +117,26 @@
 	% \subfile{./sections/section_0.tex}
 	\section{Mở đầu}
 	\subfile{./sections/section_1.tex}
+	\clearpage
 	
 	\section{Giới thiệu về Selenium}
 	\subfile{./sections/section_2.tex}
+	\clearpage
 	
 	\section{Hướng dẫn tải và cài đặt}
 	\subfile{./sections/section_3.tex}
+	\clearpage
 	
 	\section{Áp dụng Selenium vào kiểm thử ứng dụng Web}
 	\subfile{./sections/section_4.tex}
+	\clearpage
 	
 	\section{Kết luận}
-	
 	Như vậy, ta có thể thấy rằng Selenium là một framework mạnh mẽ cho kiểm thử tự động. Qua bộ công cụ của Selenium, người dùng có thể thực hiện kiểm thử nhanh chóng, hiệu quả và đem lại độ chính xác cao. Hơn nữa, Selenium là một framework có mã nguồn mở và luôn được cộng đồng hỗ trợ và phát triển. Tuy nhiên, Selenium có nhược điểm là không phù hợp với người không có kinh nghiệm về lập trình. Nếu chỉ sử dụng được Selenium IDE thì hiệu quả của việc kiểm thử sẽ không cao. Do đó, người kiểm thử bắt buộc phải biết ít nhất một ngôn ngữ lập trình mà Selenium hỗ trợ để có thể viết được các ca kiểm thử một cách bài bản, chuyên nghiệp.
 	
-	
-	%	\nocite{*}
-	%	\printbibliography[heading=bibintoc, title=Tài liệu tham khảo]
-	%	\printindex
+%	\nocite{*}
+	\printbibliography[heading=bibintoc, title=Tài liệu tham khảo]
+	\printindex
 	
 \end{document}
 
