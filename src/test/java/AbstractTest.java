@@ -1,6 +1,5 @@
 import com.microsoft.edge.seleniumtools.EdgeDriver;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +16,7 @@ public abstract class AbstractTest {
     private static String browserName;
 
     @BeforeClass
-    public static void beforeALl() throws IOException {
+    public static void beforeAbstractTest() throws IOException {
         System.out.println("helo from abstract");
         PropertyReader propertyReader = new PropertyReader("src/config.properties");
         browserName = propertyReader.getProp("browser");
@@ -56,7 +55,7 @@ public abstract class AbstractTest {
     }
 
     @AfterClass
-    public static void afterAll() {
+    public static void afterAbstractTest() {
         System.out.println("goodbye from abstract");
         driver.quit();
     }
